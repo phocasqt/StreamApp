@@ -1,0 +1,42 @@
+template(name='Nav')
+	.nav
+		nav.navbar.navbar-inverse
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href="#")
+						| Website Name
+				ul.nav.navbar-nav
+					li.active
+						a(href="{{pathFor route='home'}}")
+							| Home
+					li
+						a(href="#")
+							| Page 1
+
+					li
+						a(href="#")
+							| Page 2
+
+					li
+						a(href="#")
+							| Page 3
+				ul.nav.navbar-nav.navbar-right
+					if loggedIn
+						li
+							a(href="#")
+								span.glyphicon.glyphicon-user
+								| Profile
+						li.logout
+							a(href="#")
+								span.glyphicon.glyphicon-log-out
+								| Log Out
+					else
+						li
+							a(href="{{ pathFor route='register'}}")
+								span.glyphicon.glyphicon-edit
+								| Sign Up
+						li
+							a(href="#")
+								span.glyphicon.glyphicon-log-in
+								| Log In
+

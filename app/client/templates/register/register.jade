@@ -1,0 +1,24 @@
+template(name='Register')
+	.register
+		form.col-sm-12.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+			h2.page-header.text-center
+				| Registration Page
+			.form-group
+				label(for='username')
+					| Username:
+				input.form-control(type='text' id="username" placeholder="Username")
+			.form-group
+				label(for='password')
+					| Password:
+				input.form-control(type='password' id="password" placeholder="Password")
+			.form-group
+				label(for='confirm-password')
+					| Confirm password:
+				input.form-control(type='password' id="confirm-password" placeholder="Confirm Password")
+			.col-xs-6.text-center
+				button.btn.btn-default(id="cancel")
+					| Cancel
+			.col-xs-6.text-center
+				botton.btn.btn-success(id="submit" type="submit")
+					| Submit
+
